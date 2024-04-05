@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 192, 195, 0.481) 0%,
+    rgba(253, 187, 45, 0.453) 100%
+  );
+}
+
+.wrapper {
+  width: 450px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.59);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border-radius: 10px;
+  box-shadow: 0 0px 50px rgba(0, 0, 0, 0.08);
+}
+
+.wrapper .gradient-box {
+  height: 220px;
+  width: 100%;
+  border-radius: 7px;
+  background: linear-gradient(to left top, #22c1c3, #fdbb2d);
+  border: 1px solid #2a2a2a;
+}
+
+.wrapper .row {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.options p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.row :where(.column, button) {
+  width: calc(100% / 2 - 12px);
+}
+
+.options .select-box {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #2a2a2a;
+}
+
+.select-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: none;
+}
+
+.options .palette {
+  margin-left: 60px;
+}
+
+.palette input {
+  height: 41px;
+  width: calc(100% / 2 - 20px);
+  border: none;
+}
+
+.palette input:last-child {
+  margin-left: 6px;
+}
+
+.wrapper textarea {
+  width: 100%;
+  color: #333;
+  background-color: #ececec29;
+  font-size: 0.9rem;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1.5px solid #2a2a2a;
+}
+
+.buttons button {
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  color: #000000;
+  margin: 0 0 -15px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.buttons span {
+  margin-right: 5px;
+}
+
+.buttons .refresh {
+  background: #8cd1a6;
+}
+
+.buttons .refresh:hover {
+  background: #52926b;
+}
+
+.buttons .copy {
+  background: #57467b;
+}
+
+.buttons .copy:hover {
+  background: #432881;
+}
+
+@media screen and (max-width: 432px) {
+  .wrapper {
+    padding: 25px 20px;
+  }
+  .row :where(.column, button) {
+    width: calc(100% / 2 - 8px);
+  }
+  .options .select-box {
+    padding: 8px 15px;
+  }
+  .options .palette {
+    margin-left: 40px;
+  }
+  .options .colors {
+    display: flex;
+    justify-content: space-between;
+  }
+  .palette input {
+    width: calc(100% / 2 - 5px);
+  }
+  .palette input:last-child {
+    margin-left: 0;
+  }
+}
